@@ -90,6 +90,10 @@ bool verify_signature(const std::string& message,
                       const std::vector<unsigned char>& signature,
                       EVP_PKEY* public_key,
                       const EVP_MD* digest) {
+                        //MD = message digest, 
+                        // which is the hash function used in the signing process. 
+                        // It specifies how the message will be hashed before being signed or verified. 
+                        // Common choices include EVP_sha256() for SHA-256, EVP_sha512() for SHA-512, etc.
     EVP_MD_CTX* context = EVP_MD_CTX_new();
     if (context == nullptr) {
         throw std::runtime_error("EVP_MD_CTX_new failed");
