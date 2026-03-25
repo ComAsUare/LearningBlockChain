@@ -1,0 +1,28 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build: MerkleTree",
+      "type": "shell",
+      "command": "clang++",
+      "args": [
+        "-std=c++17",
+        "${workspaceFolder}/3_MerkleTree/MerkleTree.cpp",
+        "-I/opt/homebrew/opt/openssl/include",
+        "-L/opt/homebrew/opt/openssl/lib",
+        "-lssl",
+        "-lcrypto",
+        "-o",
+        "${workspaceFolder}/3_MerkleTree/sha256_hash"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}/3_MerkleTree"
+      },
+      "problemMatcher": ["$clang"],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ]
+}
