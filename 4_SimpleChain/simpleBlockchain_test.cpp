@@ -48,7 +48,7 @@ void testAddMultipleBlocksTracksChainSize() {
     captureStdout([&] { blockchain.addBlock(firstBlock); });
     const std::string output = captureStdout([&] { blockchain.addBlock(secondBlock); });
 
-    assert(blockchain.getBlockNum() == 2);
+    assert(blockchain.getBlockNum() ==  2);
     assert(output.find("block num:2") != std::string::npos);
     assert(output.find("tx num:0") != std::string::npos);
 }
